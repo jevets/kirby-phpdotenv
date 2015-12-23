@@ -81,7 +81,7 @@ This library loads a global helper function:
 
 `function env($key, $default = '') {...}`
 
-**Note** `function env()` declaration is wrapped in `if (!function_exists('env'))` so you can override it or use your own method.*
+**Note** `function env()` declaration is wrapped in `if (!function_exists('env'))` so you can override it or use your own method.
 
 ## Customized folder setup
 
@@ -141,7 +141,7 @@ Pull requests and suggestions are quite welcome!
 ## Credits
 
 - All credit for dotenv goes to vlucas for his great work on [PHP dotenv]([vlucas' PHPDotEnv library](https://github.com/vlucas/phpdotenv)). I just wrapped it up in a package to speed up development of Kirby-based sites.
-- I hijacked the `env()` function from Laravel, with a couple tweaks to get it working using Kirby. Thanks to Taylor Otwell.
+- I stole Taylor Otwell's version `env()` function from [Laravel 5.1](http://laravel.com/), with a couple tweaks to get it working using Kirby. 
 
 ## Bugs/Issues
 
