@@ -6,13 +6,9 @@ use Dotenv\Dotenv as PHPDotenv;
 
 class Dotenv
 {
-    public function __construct($kirby, $path = '', $file = '.env')
+    public function __construct($path, $file = '.env')
     {
-        if (!$path)
-            $path = $kirby->roots()->site() . DS . '..' . DS;
-
         $dotenv = new PHPDotenv($path, $file);
-
         $dotenv->load();
     }
 }
