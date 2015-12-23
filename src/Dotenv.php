@@ -9,10 +9,10 @@ class Dotenv
     public function __construct($kirby, $path = '', $file = '.env')
     {
         if (!$path)
-            $path = $kirby->roots()->site() . DS . '..';
+            $path = $kirby->roots()->site() . DS . '..' . DS;
 
         $dotenv = new PHPDotenv($path, $file);
-        
+
         $dotenv->load();
     }
 }
