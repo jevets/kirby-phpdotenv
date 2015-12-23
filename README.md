@@ -140,7 +140,7 @@ Pull requests and suggestions are quite welcome!
 
 ## Credits
 
-- All credit for dotenv goes to vlucas for his great work on [PHP dotenv]([vlucas' PHPDotEnv library](https://github.com/vlucas/phpdotenv)). I just wrapped it up in a package to speed up development of Kirby-based sites.
+- All credit for dotenv goes to vlucas for his great work on [PHP dotenv](https://github.com/vlucas/phpdotenv). I just wrapped it up in a package to speed up development of Kirby-based sites.
 - I stole Taylor Otwell's version `env()` function from [Laravel 5.1](http://laravel.com/), with a couple tweaks to get it working using Kirby. 
 
 ## Bugs/Issues
