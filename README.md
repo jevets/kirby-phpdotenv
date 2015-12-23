@@ -25,16 +25,8 @@ c::get('debug'); // true
 
 Install via composer
 
-```json
-"require": {
-    "jevets/kirby-phpdotenv": "dev-master"
-},
-"repositories": [
-    {
-        "type": "git",
-        "url": "https://github.com/jevets/kirby-phpdotenv"
-    }
-]
+```bash
+composer require jevets/kirby-phpdotenv dev-master
 ```
 
 ## Usage
