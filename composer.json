@@ -12,6 +12,9 @@
         "vlucas/phpdotenv": "~2.0"
     },
     "autoload": {
+        "psr-4": {
+            "Jevets\\Kirby\\Dotenv\\": "src/"
+        },
         "files": [
             "src/helpers.php"
         ]
