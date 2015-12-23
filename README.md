@@ -2,6 +2,8 @@
 
 A simple wrapper around [vlucas' PHP dotenv library](https://github.com/vlucas/phpdotenv) for [Kirby CMS](http://getkirby.com).
 
+## Why?
+
 I've been using `.env` in my Kirby projects for a while, but I got tired of pasting in the `env()` function for every new site. So, I created this package instead.
 
 ## Quick Example
@@ -47,14 +49,14 @@ require_once 'path/to/vendor/autoload.php';
 
 Then instantiate with:
 
-1. The path where Dotenv will find your `.env` file
-2. A filename other than `.env`
+1. The path where dotenv can find your `.env` file
+2. A file name other than `.env`
 
 ```php 
 new Jevets\Kirby\Dotenv\Dotenv(__DIR__ . DS, '.env');
 ```
 
-**Note:** `Jevets\Kirby\Dotenv\Dotenv` will instantiate **and** run `->load()` for you.
+**Note:** `Jevets\Kirby\Dotenv\Dotenv` will instantiate *and* run `[dotenv]->load()` for you.
 
 ### 2. Create your `.env` file
 
@@ -67,19 +69,17 @@ APP_DEBUG=true
 
 ### 3. Use in `config.php` file(s)
 
-This library loads a global helper function:
-
-`function env($key, $default = '') {...}`
-
-Use this function in your `config.php` file(s):
-
 ```php
 c::set('license', env('KIRBY_LICENSE', 'put your license in .env'));
 c::set('debug', env('APP_DEBUG', false));
 
-c::get('license'); // 1234-12345-123456
+c::get('license'); // "1234-12345-123456"
 c::get('debug'); // true
 ```
+
+This library loads a global helper function:
+
+`function env($key, $default = '') {...}`
 
 **Note** `function env()` declaration is wrapped in `if (!function_exists('env'))` so you can override it or use your own method.*
 
@@ -128,13 +128,20 @@ $kirby = kirby();
 $kirby->roots()->site = __DIR__ . DS . '..' . DS . 'site';
 ```
 
+## ChangeLog
+
+### 0.0.2
+
+- Initial release
+
 ## Collaborating
 
 Pull requests and suggestions are quite welcome!
 
 ## Credits
 
-All credit goes to vlucas for his great work on [PHP dotenv]([vlucas' PHPDotEnv library](https://github.com/vlucas/phpdotenv)). I just wrapped it up in a package to speed up development of Kirby-based sites.
+- All credit for dotenv goes to vlucas for his great work on [PHP dotenv]([vlucas' PHPDotEnv library](https://github.com/vlucas/phpdotenv)). I just wrapped it up in a package to speed up development of Kirby-based sites.
+- I hijacked the `env()` function from Laravel, with a couple tweaks to get it working using Kirby. Thanks to Taylor Otwell.
 
 ## Bugs/Issues
 
