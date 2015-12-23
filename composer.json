@@ -1,7 +1,7 @@
 {
     "name": "jevets/kirby-phpdotenv",
     "description": "Simply provides an `env($key, $default)` function and requires vlucas/phpdotenv",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "authors": [
         {
             "name": "Steve Jamesson",
