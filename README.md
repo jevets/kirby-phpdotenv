@@ -26,7 +26,7 @@ c::get('debug'); // true
 Install via composer
 
 ```bash
-composer require jevets/kirby-phpdotenv dev-master
+composer require jevets/kirby-phpdotenv 
 ```
 
 ## Usage
