@@ -1,10 +1,13 @@
 <?php 
 
-use \str as String;
+use \str as Str;
 
 if (! function_exists('env')) {
     /**
      * Gets the value of an environment variable. Supports boolean, empty and null.
+     *
+     * Originally written by Taylor Otwell for Laravel, changed
+     * just a bit to work with Kirby's \str class.
      *
      * @param  string  $key
      * @param  mixed   $default
@@ -36,7 +39,7 @@ if (! function_exists('env')) {
                 return;
         }
 
-        if (strlen($value) > 1 && String::startsWith($value, '"') && String::endsWith($value, '"')) {
+        if (strlen($value) > 1 && Str::startsWith($value, '"') && Str::endsWith($value, '"')) {
             return substr($value, 1, -1);
         }
 
