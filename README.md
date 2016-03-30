@@ -122,6 +122,10 @@ $kirby->roots()->site = __DIR__ . DS . '..' . DS . 'site';
 
 ## ChangeLog
 
+### 0.0.3
+
+- Rename class alias in helpers.php from `String` to `Str` for PHP7 compatibility
+
 ### 0.0.2
 
 - Initial release
