@@ -2,7 +2,7 @@
     "name": "jevets/kirby-phpdotenv",
     "type": "library",
     "description": "PHPDotenv for Kirby CMS",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "homepage": "https://github.com/jevets/kirby-phpdotenv",
     "keywords": ["kirby", "dotenv", "environment"],
     "license": "BSD",
