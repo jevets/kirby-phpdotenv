@@ -11,11 +11,17 @@ class Dotenv
      *
      * @param string $path
      * @param string $file
+     * @param boolean $overload
      * @return void
      */
-    public function __construct($path, $file = '.env')
+    public function __construct($path, $file = '.env', $overload = false)
     {
-        (new PHPDotenv($path, $file))
-            ->load();
+      $dotEnv = new PHPDotenv($path, $file);
+
+      if ($overload) {
+        $dotEnv->overload();
+      } else {
+        $dotEnv->load();
+      }
     }
 }
